@@ -1060,6 +1060,9 @@ sudo mkdir -p /mnt/run/systemd/resolve
 sudo touch /mnt/run/systemd/resolve/stub-resolv.conf
 sudo cat /run/systemd/resolve/stub-resolv.conf | sudo tee /mnt/run/systemd/resolve/stub-resolv.conf >/dev/null;
 
+# Fix resolve.conf to solve 'Temporary failure in name resolution'                  sudo rm /mnt/etc/resolv.conf
+sudo ln -s /mnt/var/run/systemd/resolve/resolv.conf /mnt/etc/resolv.conf
+
 # % Enter Ubuntu image chroot
 echo "Entering chroot of IMG file"
 sudo chroot /mnt /bin/bash << EOF
