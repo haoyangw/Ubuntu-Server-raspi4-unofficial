@@ -39,12 +39,12 @@ if [ -d ".updates" ]; then
         sudo git reset --hard origin/master
         cd ..
     else
-        sudo git clone https://github.com/TheRemote/Ubuntu-Server-raspi4-unofficial.git
+	sudo git clone https://github.com/haoyangw/Ubuntu-Server-raspi4-unofficial.git
     fi
 else
     sudo mkdir .updates
     cd .updates
-    sudo git clone https://github.com/TheRemote/Ubuntu-Server-raspi4-unofficial.git
+    sudo git clone https://github.com/haoyangw/Ubuntu-Server-raspi4-unofficial.git
 fi
 cd ..
 
@@ -97,7 +97,7 @@ sudo apt -qq purge libraspberrypi-bin raspi-config -y >/dev/null 2>&1
 
 echo "Downloading update package ..."
 if [ -e "updates.tar.xz" ]; then rm -rf "updates.tar.xz"; fi
-sudo curl --location "https://github.com/TheRemote/Ubuntu-Server-raspi4-unofficial/releases/download/v${LatestRelease}/updates.tar.xz" --output "updates.tar.xz"
+sudo curl --location "https://github.com/haoyangw/Ubuntu-Server-raspi4-unofficial/releases/download/v${LatestRelease}/updates.tar.xz" --output "updates.tar.xz"
 if [ ! -e "updates.tar.xz" ]; then
     echo "Update has failed to download -- please try again later"
     exit
