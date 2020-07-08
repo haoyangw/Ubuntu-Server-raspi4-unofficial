@@ -385,7 +385,7 @@ if [ ! -d "/opt/cross-pi-gcc-9.2.0-64" ]; then
   echo "Installing cross pi build toolchain dependencies ..."
   sudo apt-get install git curl unzip build-essential libgmp-dev libmpfr-dev libmpc-dev libssl-dev bison flex kpartx libguestfs-tools gawk gcc g++ gfortran cmake texinfo libncurses-dev pkg-config -y
 
-  curl --location "https://sourceforge.net/projects/raspberry-pi-cross-compilers/files/latest/download" --output "cross-pi-gcc-9.2.0-64.tar.gz"
+  curl --location "https://sourceforge.net/projects/raspberry-pi-cross-compilers/files/Bonus%20Raspberry%20Pi%20GCC%2064-Bit%20Toolchains/Raspberry%20Pi%20GCC%2064-Bit%20Cross-Compiler%20Toolchains/GCC%209.2.0/cross-gcc-9.2.0-pi_64.tar.gz/download" --output "cross-pi-gcc-9.2.0-64.tar.gz"
   tar -xf "cross-pi-gcc-9.2.0-64.tar.gz"
   rm -rf "cross-pi-gcc-9.2.0-64.tar.gz"
   sudo mv cross-pi-gcc-9.2.0-64 /opt
